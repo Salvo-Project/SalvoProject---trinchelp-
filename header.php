@@ -8,7 +8,13 @@
     <?php
 session_start();
 if(isset($_SESSION['username'])){
-    echo '<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    echo '
+    <html>
+    <head>
+    <title>Trinchelp</title>
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">TRINCHELP</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,12 +22,6 @@ if(isset($_SESSION['username'])){
   
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Materia
@@ -46,7 +46,7 @@ if(isset($_SESSION['username'])){
 
     echo '<div class="card">
     <div class="card-header">
-      Quote
+      Quesito di <span id="materia"></span>
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
@@ -59,4 +59,6 @@ if(isset($_SESSION['username'])){
 } else {
     echo "<script>window.location.href = 'http://localhost/website/trinchelp'</script>";
 }
+
+include_once 'footer.php';
 ?>

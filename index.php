@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trinchelp</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
@@ -33,7 +33,8 @@
                 <p><small id="user_error_msg" class="text-danger"></small></p>
                 <div class="form-group d-flex px-3 py-1 m-0">
                     <i class="fas fa-unlock-alt my-auto"></i>
-                    <input type="password" autocomplete="off" name="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Digita la password">
+                    <i class="far fa-eye my-auto fa-lg" id="togglePassword" style=" margin-left: -30px;cursor: pointer;"></i>
                 </div>
                 <p><small id="password_error_msg" class="text-danger"></small></p>
                 <div class="text-center pt-4">
@@ -45,15 +46,26 @@
         </div>
     </div>
     <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
+
+    <script>
         $("#submit_btn").click(function(){
             username = $("#username").val();
-            password = $("#password").val();
+            passwordfield = $("#password").val();
             $("#user_error_msg").html("");
             $("#password_error_msg").html("");
             if(username == ""){
                 $("#user_error_msg").html("lo username non può essere vuoto");
                 $("#username").focus();
-            } else if(password == ""){
+            } else if(passwordfield == ""){
                 $("#password_error_msg").html("la password non può essere vuota");
                 $("#password").focus();
             } else {

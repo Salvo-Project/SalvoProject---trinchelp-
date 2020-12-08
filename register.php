@@ -33,12 +33,14 @@
                 <p><small id="user_error_msg" class="text-danger"></small></p>
                 <div class="form-group d-flex px-3 py-1 m-0">
                     <i class="fas fa-unlock-alt my-auto"></i>
-                    <input type="password" autocomplete="off" name="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Digita la password">
+                    <i class="far fa-eye my-auto fa-lg" id="togglePassword" style=" margin-left: -30px;cursor: pointer;"></i>
                 </div>
                 <p><small id="password_error_msg" class="text-danger"></small></p>
                 <div class="form-group d-flex px-3 py-1 m-0">
                     <i class="fas fa-unlock-alt my-auto"></i>
-                    <input type="password" autocomplete="off" name="repassword" class="form-control" id="repassword" placeholder="Ripeti la Password">
+                    <input type="password" name="repassword" id="repassword" class="form-control" placeholder="Ridigita la password">
+                    <i class="far fa-eye my-auto fa-lg" id="retogglePassword" style=" margin-left: -30px;cursor: pointer;"></i>
                 </div>
                 <p><small id="re_password_error_msg" class="text-danger"></small></p>
                 <div class="text-center pt-4">
@@ -49,6 +51,26 @@
               </form>
         </div>
     </div>
+    <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
+    <script>
+    const retogglePassword = document.querySelector('#retogglePassword');
+    const repassword = document.querySelector('#repassword');
+
+    retogglePassword.addEventListener('click', function (e) {
+    const type = repassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    repassword.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
     <script>
         $("#submit_btn").click(function(){
             username = $("#username").val();

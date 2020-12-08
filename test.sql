@@ -38,6 +38,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'test', '123456');
+
 --
 -- Indexes for dumped tables
 --
