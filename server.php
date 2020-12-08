@@ -14,7 +14,7 @@ if(isset($username) && isset($password)){
     while($row = $result->fetch_assoc()){
         session_start();
         $_SESSION['username'] = $row['username'];
-        echo "window.location.href = 'http://localhost/website/trinchelp/dashboard.php'";
+        echo "window.location.href = 'http://localhost/website/trinchelp/header.php'";
     }
  } else {
     echo 'alert("Username/Password non corretti")';
