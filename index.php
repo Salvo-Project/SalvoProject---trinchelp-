@@ -47,11 +47,11 @@
     </div>
     <script>
     const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
+    const passwordField = document.querySelector('#password');
 
     togglePassword.addEventListener('click', function (e) {
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
     </script>
@@ -59,13 +59,13 @@
     <script>
         $("#submit_btn").click(function(){
             username = $("#username").val();
-            passwordfield = $("#password").val();
+            password = $("#password").val();
             $("#user_error_msg").html("");
             $("#password_error_msg").html("");
             if(username == ""){
                 $("#user_error_msg").html("lo username non può essere vuoto");
                 $("#username").focus();
-            } else if(passwordfield == ""){
+            } else if(password == ""){
                 $("#password_error_msg").html("la password non può essere vuota");
                 $("#password").focus();
             } else {

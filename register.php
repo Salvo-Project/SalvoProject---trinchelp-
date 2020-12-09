@@ -61,6 +61,7 @@
     this.classList.toggle('fa-eye-slash');
 });
     </script>
+    
     <script>
     const retogglePassword = document.querySelector('#retogglePassword');
     const repassword = document.querySelector('#repassword');
