@@ -15,8 +15,8 @@
     <div class="container">
         <h2 class="text-white text-center mb-4">Benvenuto !</h2>
         <div class="card col-lg-5 col-md-6 col-12 mx-auto px-4 py-5">
-            <p class="text-center"><small>Accedi con</small></p>
-            <form action="./server.php" method="post" id="login_form" onsubmit="return false;">
+            <p class="text-center"><small>Registrati con</small></p>
+            <form action="./server_register.php" method="post" id="register_form" onsubmit="return false;">
             <div class="container text-center">
                 <a href="">
                 <i class="fab fa-google"></i>
@@ -32,6 +32,11 @@
                 </div>
                 <p><small id="user_error_msg" class="text-danger"></small></p>
                 <div class="form-group d-flex px-3 py-1 m-0">
+                <i class="fas fa-envelope-open-text my-auto"></i>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="example@mail.com">
+                </div>
+                <p><small id="email_error_msg" class="text-danger"></small></p>
+                <div class="form-group d-flex px-3 py-1 m-0">
                     <i class="fas fa-unlock-alt my-auto"></i>
                     <input type="password" name="password" id="password" class="form-control" placeholder="Digita la password">
                     <i class="far fa-eye my-auto fa-lg" id="togglePassword" style=" margin-left: -30px;cursor: pointer;"></i>
@@ -39,7 +44,7 @@
                 <p><small id="password_error_msg" class="text-danger"></small></p>
                 <div class="form-group d-flex px-3 py-1 m-0">
                     <i class="fas fa-unlock-alt my-auto"></i>
-                    <input type="password" name="repassword" id="repassword" class="form-control" placeholder="Ridigita la password">
+                    <input type="password" name="confirmpassword" id="repassword" class="form-control" placeholder="Ridigita la password">
                     <i class="far fa-eye my-auto fa-lg" id="retogglePassword" style=" margin-left: -30px;cursor: pointer;"></i>
                 </div>
                 <p><small id="re_password_error_msg" class="text-danger"></small></p>
@@ -76,9 +81,11 @@
         $("#submit_btn").click(function(){
             username = $("#username").val();
             password = $("#password").val();
+            email = $("#email").val();
             repassword = $("#repassword").val();
             $("#user_error_msg").html("");
             $("#password_error_msg").html("");
+            $("##re_password_error_msg").html("");
             if(username == ""){
                 $("#user_error_msg").html("lo username non può essere vuoto");
                 $("#username").focus();
@@ -89,7 +96,7 @@
                 $("#re_password_error_msg").html("le password non combaciano");
                 $("#repassword").focus();
             } else {
-                var form = $('#login_form');
+                var form = $('#register_form');
                 $.ajax({
                     type: form.attr('method'),
                     url: form.attr('action'),
