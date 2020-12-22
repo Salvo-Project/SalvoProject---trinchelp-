@@ -16,7 +16,7 @@
         <h2 class="text-white text-center mb-4">Benvenuto !</h2>
         <div class="card col-lg-5 col-md-6 col-12 mx-auto px-4 py-5">
             <p class="text-center"><small>Registrati con</small></p>
-            <form action="./server_register.php" method="post" id="register_form" onsubmit="return false;">
+            <form action="server_register.php" method="post" id="register_form" onsubmit="return false;">
             <div class="container text-center">
                 <a href="">
                 <i class="fab fa-google"></i>
@@ -58,22 +58,22 @@
     </div>
     <script>
     const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
+    const psw = document.querySelector('#password');
 
     togglePassword.addEventListener('click', function (e) {
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+    psw.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
     </script>
     
     <script>
     const retogglePassword = document.querySelector('#retogglePassword');
-    const repassword = document.querySelector('#repassword');
+    const repsw = document.querySelector('#repassword');
 
     retogglePassword.addEventListener('click', function (e) {
     const type = repassword.getAttribute('type') === 'password' ? 'text' : 'password';
-    repassword.setAttribute('type', type);
+    repsw.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
     </script>

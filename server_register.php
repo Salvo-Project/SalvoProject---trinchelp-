@@ -8,8 +8,8 @@ $link = new mysqli($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
 
 $username = $_POST['username'];
 $email = $_POST['email'];
-$password = md5($_POST['password']);
-$confirmpassword = md5($_POST['confirmpassword']);
+$password = sha512($_POST['password']);
+$confirmpassword = sha512($_POST['confirmpassword']);
 $sql = "INSERT INTO user (username,email,password,confirmpassword) VALUES (?, ?, ?, ?)";
 if($stmt = mysqli_prepare($link, $sql)){
     mysqli_stmt_bind_param($stmt, "ssss",$param_username,$param_email,$param_confirmpassword,$param_password);
