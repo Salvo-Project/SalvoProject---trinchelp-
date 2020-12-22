@@ -17,7 +17,7 @@ if(isset($username) && isset($password)){
         echo "window.location.href = 'http://localhost/website/trinchelp/header.php'";
     }
  } else {
-    echo 'alert("Username/Password non corretti")';
+    echo 'alert("Utente non registrato! Si prega di ricontrollare Username e/o Password")';
  }
 }
 ?>

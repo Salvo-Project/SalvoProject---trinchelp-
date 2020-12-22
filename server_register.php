@@ -24,4 +24,6 @@ if($stmt = mysqli_prepare($link, $sql)){
         echo "window.location.href = 'http://localhost/signin/dashboard.php'";
     }
 }
+
+var_dump();
 ?>

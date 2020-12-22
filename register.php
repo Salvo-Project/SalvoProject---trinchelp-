@@ -61,7 +61,7 @@
     const psw = document.querySelector('#password');
 
     togglePassword.addEventListener('click', function (e) {
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    const type = psw.getAttribute('type') === 'password' ? 'text' : 'password';
     psw.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
@@ -72,7 +72,7 @@
     const repsw = document.querySelector('#repassword');
 
     retogglePassword.addEventListener('click', function (e) {
-    const type = repassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    const type = repsw.getAttribute('type') === 'password' ? 'text' : 'password';
     repsw.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
@@ -85,7 +85,7 @@
             repassword = $("#repassword").val();
             $("#user_error_msg").html("");
             $("#password_error_msg").html("");
-            $("##re_password_error_msg").html("");
+            $("#re_password_error_msg").html("");
             if(username == ""){
                 $("#user_error_msg").html("lo username non può essere vuoto");
                 $("#username").focus();
