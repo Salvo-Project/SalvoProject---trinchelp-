@@ -1,4 +1,17 @@
+body {
+    background: url(img/bg.jpg) !important;
+}
+
 .breadcrumb, .card {
     padding: 20px !important;
     margin: 20px !important;
+}
+
+.rounded {
+    width: 50px !important;
+    height: auto !important;
+}
+
+ul {
+    list-style-type: none;
 }

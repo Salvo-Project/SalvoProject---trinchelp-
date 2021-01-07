@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="time.js"></script>
+    <script src="https://kit.fontawesome.com/0dd12f1f33.js" crossorigin="anonymous"></script>
+    <!--<script src="time.js"></script>-->
     <?php
 session_start();
 if(isset($_SESSION['username'])){
@@ -39,20 +40,22 @@ if(isset($_SESSION['username'])){
     echo "<nav aria-label='breadcrumb'>
             <ol class='breadcrumb'>
               <li class='breadcrumb-item active' aria-current='page'>" .
-              '<p id="demo">Benvenuto ' . $_SESSION['username'] . '</p>'
+              '<p id="demo">Benvenuto ' . $_SESSION["username"] . '</p>'
             . " </li>
             </ol>
           </nav>";
 
     echo '<div class="card">
     <div class="card-header">
-      Quesito di <span id="materia"></span>
+    <img src="img/img_test.png" class="rounded float-left profile_img" alt="immagine di profilo di un utente">
+    <h5>'.$_SESSION["username"].'</h3>
+    <br>
+      <p>Quesito di <span id="materia"></span></p>
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>'.$row['description'].'</p>
-        <p>'.$row['quesito'].'</p>
-        <footer class="blockquote-footer">Richiesta fatta da <cite title="Source Title">'.$_SESSION['username'].'</cite></footer>
+        <p> '.$row["description"].' </p>
+        <p> '.$row["quesito"].' </p>
       </blockquote>
     </div>
   </div>';

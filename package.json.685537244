@@ -1,0 +1,24 @@
+{
+  "name": "trinchelp",
+  "version": "1.0.0",
+  "description": "a blog for my school",
+  "main": "time.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salvo-Project/SalvoProject---trinchelp-.git"
+  },
+  "author": "Salvatore Calò",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salvo-Project/SalvoProject---trinchelp-/issues"
+  },
+  "homepage": "https://github.com/Salvo-Project/SalvoProject---trinchelp-#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "poppins": "^0.1.1"
+  }
+}

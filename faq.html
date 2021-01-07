@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.A.Q.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0dd12f1f33.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="text-center">Frequent asked questions</h1>
+
+    <div id="accordion" class="lg sm ">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+             Chi siamo?
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+             <b>Noi non siamo nessuno!</b> Siamo un team di volontari che ha creato questo progetto affinche noi trinchesini possiamo aiutarci a vicenda.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Come contribuire al progetto
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <b>Ci sono diversi ruoli chiave per contribuire al progetto</b>
+                Ecco alcuni esempi
+                <ul>
+                    <li>
+                        👨🏻‍💻
+                        <code>Developer</code>
+                        <p>Si occupa del codice sorgente del progetto. Nozioni richieste: HTML, CSS, JS, PHP, MYSQL</p>
+                    </li>
+                    <li>
+                        👮🏻‍♂️
+                        <code>Amministratore</code>
+                        <p>Gestisce la piattaforma, i post e gli atteggiamenti degli utenti Può sanzionare,bandire gli utenti, elminare post inappropiati</p>
+                    </li>
+                    <li>
+                        👷🏻‍♂️
+                        <code>Amministratore</code>
+                        <p>Modera i commenti/post e linguaggi della gente sulla piattaforma. Può sanzionare, bandire gli utenti e eliminare post. Nonostante abbia meno poteri di un amministratore, la sua carica non è da sottovalutare!</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-nurse"></i>
+                        <code>Donatore</code>
+                        <p>Tutto lo staff ringrazia infinitamente i donatori che ci aiutano con le spese per il server! per sapere come donare <a href="how-to-donor">clicca qui</a></p>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="how-to-donor">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                ome donare
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Per donare, invia una somma di denaro (da 5.00€ in su) all'nidirzzo email: email_paypal, e scrivi nel messaggio il tuo username. Entro 24h (o più in presenza di problemi tecnici) ti verranno dati i privilegi da donatore
+                <p class="text-warning"><b>ATTENZIONE!</b> qualsiasi donazione senza alcun riferimento alla persona o all'utente verrà presa come vuota e non riceveranno i privilegi da donatore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

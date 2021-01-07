@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="text-white text-center mb-4">Bentornato !</h2>
+        <h2 class="text-center mb-4">Bentornato !</h2>
         <div class="card col-lg-5 col-md-6 col-12 mx-auto px-4 py-5">
             <p class="text-center"><small>Accedi con</small></p>
             <form action="server_logging.php" method="post" id="login_form" onsubmit="return false;">

@@ -3,6 +3,18 @@
     <p class="mb-0 mt-1 text-white" style="font-size: 16px;">
         &copy; <?php echo date("Y");?> <span class="read-more">Trinchelp</span> - Tutti i diritti Riservati
     </p>
+
+    <ul>
+        <li>
+            <a href="./faq.html">F.A.Q.</a>
+        </li>
+        <li>
+         <a href="./faq.html/#noi">Chi siamo</a>
+        </li>
+        <li>
+            <a href="./faq.html/#contributi">Voglio contribuire</a>
+        </li>
+    </ul>
 </div>
 </footer>
 <script>
